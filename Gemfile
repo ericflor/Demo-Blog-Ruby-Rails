@@ -33,11 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# make errors better looking
-gem 'better_errors', '~> 2.5'
+
 
 # Bulma CSS
-gem 'bulma', '~> 0.1.0'
+gem "bulma-rails", "~> 0.7.4"
 
 # Simple Form
 gem 'simple_form', '~> 4.1'
@@ -60,7 +59,10 @@ group :development do
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.15'
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # make errors better looking
+  gem 'better_errors', '~> 2.5'
+  gem 'binding_of_caller'
 end
 
 group :test do
